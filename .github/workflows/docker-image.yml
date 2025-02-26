@@ -13,7 +13,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          secrets: inherit  
       
       - name: Build and Push
         uses: docker/build-push-action@v5
