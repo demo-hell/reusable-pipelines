@@ -1,14 +1,8 @@
 name: DOCKER-IMAGE
+
 on:
   push:
   workflow_call:
-    inputs:
-      username:
-        required: true
-        type: string
-      password:
-        required: true
-        type: string
 
 jobs:
   build:
