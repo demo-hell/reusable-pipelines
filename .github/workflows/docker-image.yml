@@ -1,4 +1,4 @@
-name: DOCKER-IMAGE
+name: PIPE-DOCKER-IMAGE
 
 on:
   push:
@@ -6,22 +6,5 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Login Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
-      - name: Build and Push
-        uses: docker/build-push-action@v5
-        with:
-          push: true
-          context: ./src
-          file: ./src/Dockerfile
-          tags: |
-            maymisson1/python-web-app:${{ github.run_number }}
-            maymisson1/python-web-app:latest
+    uses: './.github/workflows/jobs/docker/docker-build.yml'
+    secrets: inherit
