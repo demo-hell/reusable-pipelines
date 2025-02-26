@@ -1,4 +1,4 @@
-name: JOB-DOCKER-BUILD
+name: job-docker-build
 
 on:
   push:
