@@ -1,0 +1,10 @@
+name: pipe-docker-image
+
+on:
+  push:
+  workflow_call:
+
+jobs:
+  build:
+    uses: demo-hell/reusable-pipelines/.github/workflows/job-docker-build.yml@main
+    secrets: inherit
