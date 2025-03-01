@@ -1,0 +1,10 @@
+name: pointer-proxy
+
+on:
+  push:
+  workflow_call:
+
+jobs:
+  pointer-pipe-docker-image:
+    uses: demo-hell/reusable-pipelines/.github/workflows/docker/pipelines/pipe-docker-image.yml@main
+    secrets: inherit
