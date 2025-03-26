@@ -1,0 +1,15 @@
+name: job-docker-build
+
+on:
+  push:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run another job
+        run: echo "Running another job based on the topic"

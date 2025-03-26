@@ -9,8 +9,8 @@ runs:
     
     - name: another-pipe
       if: contains(github.event.repository.topics, 'another-topic')
-      uses: actions/checkout@v2
-      
+      uses: demo-hell/reusable-pipelines/.github/workflows/pipe-other.yml@main
+
 # jobs:
 #   pointer-pipe-docker-image:
 #     if: contains(github.event.repository.topics, 'docker')

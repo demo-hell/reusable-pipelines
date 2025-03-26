@@ -1,0 +1,10 @@
+name: pipe-other
+
+on:
+  push:
+  workflow_call:
+
+jobs:
+  build:
+    uses: demo-hell/reusable-pipelines/.github/workflows/job-other.yml@main
+    secrets: inherit
