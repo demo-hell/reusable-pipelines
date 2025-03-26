@@ -3,12 +3,10 @@ description: 'This action is used to point to another action'
 runs:
   using: "composite"
   steps:
-    - name: pipe-docker-image
-      if: contains(github.event.repository.topics, 'docker')
+    - if: contains(github.event.repository.topics, 'docker')
       uses: demo-hell/reusable-pipelines/.github/workflows/pipe-docker-image.yml@main
     
-    - name: another-pipe
-      if: contains(github.event.repository.topics, 'another-topic')
+    - if: contains(github.event.repository.topics, 'another-topic')
       uses: demo-hell/reusable-pipelines/.github/workflows/pipe-other.yml@main
 
 # jobs:
