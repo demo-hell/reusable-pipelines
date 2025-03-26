@@ -4,12 +4,12 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v4
+
+    # - if: contains(github.event.repository.topics, 'docker')
+    #   uses: demo-hell/reusable-pipelines/.github/workflows/pipe-docker-image.yml@main
     
-    - if: contains(github.event.repository.topics, 'docker')
-      uses: demo-hell/reusable-pipelines/.github/workflows/pipe-docker-image.yml@main
-    
-    - if: contains(github.event.repository.topics, 'another-topic')
-      uses: demo-hell/reusable-pipelines/.github/workflows/pipe-other.yml@main
+    # - if: contains(github.event.repository.topics, 'another-topic')
+    #   uses: demo-hell/reusable-pipelines/.github/workflows/pipe-other.yml@main
 
 # jobs:
 #   pointer-pipe-docker-image:
