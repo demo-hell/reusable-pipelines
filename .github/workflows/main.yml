@@ -8,5 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/pointer
+      - uses: demo-hell/reusable-pipelines/.github/actions/pointer@main
+        with:
+          secrets: inherit
     
